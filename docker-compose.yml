@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  mykoa2:
+    image: mykoa2
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000
