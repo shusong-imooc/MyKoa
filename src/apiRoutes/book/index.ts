@@ -8,10 +8,10 @@
  */
 import koa from 'koa'
 import Router from "koa-router";
-import UserController from '../../controller/userController/index';
+import BookController from '../../controller/bookController/index';
 
 const router: Router = new Router()
-router.prefix('/user')
+router.prefix('/book')
 
 // 用户注册
 router.post('/regist', async (ctx:koa.BaseContext) => {
@@ -25,7 +25,7 @@ router.post('/login', async (ctx:koa.BaseContext) => {
 
 // 获取用户 列表
 router.get('/list', async (ctx:koa.BaseContext) => {
-    const data = await UserController.getList();
+    const data = await BookController.getList();
     ctx.body = {
         key: data
     }

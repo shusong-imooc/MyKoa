@@ -3,7 +3,6 @@ import { Model, Table, Column, AllowNull, AutoIncrement, Unique, Default, Primar
 @Table({ tableName: 'users' })
 export class Users extends Model<Users> {
 
-
   @Comment('ID')
   @AllowNull(false)
   @PrimaryKey
