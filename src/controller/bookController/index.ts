@@ -9,4 +9,9 @@ export default class BookController {
         const data= await BookService.getList();
         return data;
     }
+
+    static async getAuthorByBookID(params?: params) {
+        const data= await BookService.getAuthorByBookID();
+        return data;
+    }
 }

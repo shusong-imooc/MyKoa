@@ -35,7 +35,7 @@ export default class InitManager {
             //     file.lastIndexOf("."),
             //     file.length
             // );
-            console.log(file)
+            // console.log(file)
             if (!file.endsWith('.js')) { 
                 continue
             }

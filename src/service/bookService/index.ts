@@ -12,4 +12,15 @@ export default class BookService {
         });
         return users;
     }
+
+    static async getAuthorByBookID(params?: params) {
+        const author =  await Books.findAll({
+            include:[{
+                attributes:{exclude:['password','createdAt']},
+                model:User,
+                as:'author'
+            }]
+        })
+        return author;
+    }
 }

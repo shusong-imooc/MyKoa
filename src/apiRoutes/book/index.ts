@@ -23,12 +23,18 @@ router.post('/login', async (ctx:koa.BaseContext) => {
 
 })
 
-// 获取用户 列表
+// 获取书籍 列表
 router.get('/list', async (ctx:koa.BaseContext) => {
     const data = await BookController.getList();
     ctx.body = {
         key: data
     }
+})
+
+// 获取书籍作者信息
+router.get('/book/:id', async (ctx:koa.BaseContext) => {
+    const data = await BookController.getAuthorByBookID();
+    ctx.body = data;
 })
 
 export default router;
